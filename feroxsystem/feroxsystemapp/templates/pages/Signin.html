@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a811b5afd0.js" crossorigin="anonymous"></script>
+    <title>Frerox Technologies</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 84%;
+        }
+
+
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        #btn {
+            border: none;
+            padding: 0;
+            background: none;
+            outline: none;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<!-- {% load static %} style="background-image: url({% static 'IMG/landpage.png'%}); background-repeat: no-repeat;"-->
+<body class="w3-light-grey" {% load static %} style="background-image: url({% static 'IMG/landpage.png'%}); background-repeat: no-repeat;">
+    <!-- Top Container -->
+    <div class="w3-bar w3-top w3-2021-inkwell w3-large">
+        <span class="w3-bar-item">FEROX TECHNOLOGIES</span>
+        <div class="custom-select w3-right" style="width: 150px">
+            <select name="lang" id="lang" class="w3-bar-item w3-hover-none w3-2021-inkwell">
+                <option value="vn" style="color: black; background-color: white">
+                    <b> Tiếng Việt </b>
+                </option>
+                <option value="en" style="color: black; background-color: white">
+                    <b> English </b>
+                </option>
+            </select>
+        </div>
+
+        <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey w3-right" onclick="myFunction()">
+            <i class="fa fa-question"></i> Hướng Dẫn
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey w3-right" onclick="myFunction()">
+            <i class="fa fa-comments"></i> Hỗ Trợ Khách Hàng
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-none w3-hover-text-light-grey w3-right" onclick="myFunction()">
+            <i class="fa fa-home"></i> Trang Chủ
+        </button>
+    </div>
+    <div class="w3-row">
+        <div class="w3-half" style="padding: 50px 70px;"    >
+            <div class="w3-container w3-card-2 w3-main w3-2021-inkwell" style="margin-top: 20%;">
+                <div>
+                    <button id="btn1" onclick="myFunction1()"
+                        style="padding: 12px 20px; margin: 8px 0px; width: 100%; border: 1px solid #363945; background-color:   #363945;">
+                        <strong>
+                            <h4>ĐĂNG NHẬP</h4>
+                        </strong>
+                    </button><br>
+                </div>
+                <section id="Login" style="display: none;" class="w3-animate-zoom">
+                    <form action="" method="post">
+                        <div class="w3-container w3-center">
+                            <input type="text" placeholder="Enter Email" name="email" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="password" placeholder="Enter Password" name="psw" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <button type="submit" class="w3-center"
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid  #35d86b; background-color:  #35d86b;">Đăng
+                                nhập</button>
+                        </div>
+                        <div class="w3-container w3-center">
+                            <button type="button" class="w3-left cancelbtn"
+                                style="width: auto; padding: 8px 18px; background-color: #f44336; border: 1px solid #f44336">Huỷ</button>
+                            <span class="psw">Quên <a href="#">mật khẩu ?</a></span>
+                        </div><br><br>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="w3-half" style="padding: 50px 70px;">
+            <div class="w3-container w3-card-2 w3-main w3-2021-inkwell" style="margin-top: 20%;">
+                <div>
+                    <button id="btn2" onclick="myFunction2()"
+                        style="padding: 12px 20px; margin: 8px 0px; width: 100%; border: 1px solid #363945; background-color:   #363945;">
+                        <strong>
+                            <h4>ĐĂNG KÝ</h4>
+                        </strong>
+                    </button><br>
+                </div>
+                <section id="Signup" style="display: none;" class="w3-animate-zoom">
+                    <form action="" method="post">
+                        <div class="w3-container w3-center">
+                            <input type="text" placeholder="Enter Username" name="uname" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="password" placeholder="Enter Password" name="psw" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="text" placeholder="Enter Address" name="address" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="number" placeholder="Enter Phone" name="cell" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="email" placeholder="Enter Email" name="mail" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+                            <input type="text" placeholder="Enter Referral Code" name="code" required
+                                style="padding: 12px 20px; margin: 8px 0px; width: 65%; border: 1px solid #ffffff;" /><br>
+
+                        </div>
+                        <div class="w3-container w3-center">
+                            <button type="submit" class="w3-center"
+                                style="padding: 12px 20px; margin: 8px 0px; width: 40%; border: 1px solid  #35d86b; background-color:  #35d86b;">Login</button>
+                            <button type="button" class="cancelbtn"
+                                style="padding: 12px 20px; margin: 8px 0px; width: 25%; background-color: #f44336; border: 1px solid #f44336">Cancel</button>
+                        </div><br>
+                        <div class="w3-container w3-center">
+                            <span class="w3-left"><a href="#">LƯU Ý </a></span>
+                            <span class="w3-right">Đã có tài khoản ?<a onclick="myFunction1()" > Đăng Nhập.</a></span>
+                        </div>
+                        <br><br>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function myFunction1() {
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Signup");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function myFunction2() {
+        var x = document.getElementById("Signup");
+        var y = document.getElementById("Login");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+</html>
