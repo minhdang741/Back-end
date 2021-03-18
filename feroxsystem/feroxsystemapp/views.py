@@ -6,12 +6,12 @@ import json
 # Create your views here.
 
 
-"""
+
 def index(request):
     return render(request, 'pages/Signin.html')
+
+
 """
-
-
 def index(request):
     customer = Connect.connection()
     file = open('/home/dang/Documents/customer/customer (another copy).json', 'r')
@@ -24,3 +24,4 @@ def index(request):
     customer.insert_many(data)
     file.close()
     return HttpResponse("Done")
+"""
