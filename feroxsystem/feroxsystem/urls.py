@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import feroxsystemapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('feroxsystemapp/', include('feroxsystemapp.urls'))
+    path('',feroxsystemapp.views.index, name="index")
 ]
