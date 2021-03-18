@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from .connect import Connect
 import json
 
-# Create your views here.
 
+# Create your views here.
 
 
 def index(request):
@@ -15,10 +15,10 @@ def index(request):
 def index(request):
     customer = Connect.connection()
     file = open('/home/dang/Documents/customer/customer (another copy).json', 'r')
-    """
-    # with open('/home/dang/Documents/customer/customer (copy).json') as f:
-    #    data = json.loads(f)
-    """
+    
+     with open('/home/dang/Documents/customer/customer (copy).json') as f:
+        data = json.loads(f)
+    
     data = json.load(file)
     # print(data)
     customer.insert_many(data)
