@@ -8,7 +8,7 @@ import json
 
 
 def index(request):
-    return render(request, 'pages/Signin.html')
+    return render(request, 'pages/index.html')
 
 
 """
