@@ -19,6 +19,6 @@ import feroxsystemapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('feroxsystemapp/', include('feroxsystemapp.urls'),
-    path('',feroxsystemapp.views.index, name="index"),
-]
+    # path('feroxsystemapp/', include('feroxsystemapp.urls'),
+    path('',feroxsystemapp.views.index),]
+
