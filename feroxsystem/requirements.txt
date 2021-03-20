@@ -6,4 +6,4 @@ dj-database-url
 requests
 whitenoise
 pymongo
-python-memcache
+python-memcached
