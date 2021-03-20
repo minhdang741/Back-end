@@ -17,8 +17,24 @@ from django.contrib import admin
 from django.urls import path, include
 import feroxsystemapp.views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('feroxsystemapp/', include('feroxsystemapp.urls'),
-    path('',feroxsystemapp.views.index),]
-
+    path('account/', include('django.contrib.auth.urls')),
+    path('login/', feroxsystemapp.views.LoginViewSite.as_view(), name='login'),
+    path('profile/', feroxsystemapp.views.HomeViewSite.as_view(), name='profile')
+]
+"""
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', feroxsystemapp.views.login),
+]
+"""
+"""
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('login/', feroxsystemapp.views.login, name='login'),
+    path('home/', feroxsystemapp.views.formview, name='home'),
+    path('logout/', feroxsystemapp.views.logout, name='logout')
+]
+"""
