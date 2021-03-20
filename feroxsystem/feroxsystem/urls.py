@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('django.contrib.auth.urls')),
     path('login/', feroxsystemapp.views.LoginViewSite.as_view(), name='login'),
-    path('profile/', feroxsystemapp.views.HomeViewSite.as_view(), name='profile')
+    path('profile/', feroxsystemapp.views.HomeViewSite.as_view(), name='profile'),
+    path('', feroxsystemapp.views.LoginViewSite.as_view())
 ]
 """
 urlpatterns = [
