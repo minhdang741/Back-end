@@ -6,5 +6,5 @@ class Connect(object):
     @staticmethod
     def connection():
         client = MongoClient("mongodb://localhost:27017/")
-        customer = client.customerdata.customer
-        return customer
+        # customer = client.customerdata.customer
+        return client

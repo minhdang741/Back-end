@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'feroxsystemapp.apps.FeroxsystemappConfig'
+    'feroxsystemapp.apps.FeroxsystemappConfig',
+    'account.apps.AccountConfig'
 ]
 
 MIDDLEWARE = [

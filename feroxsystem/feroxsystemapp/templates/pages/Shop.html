@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a811b5afd0.js" crossorigin="anonymous"></script>
+    <title>Ferox Technologies - Chọn danh mục đầu tư</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 84%;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .w3-left,
+        .w3-right,
+        .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top Container -->
+    <div class="w3-bar w3-top w3-2021-inkwell w3-large">
+        <span class="w3-bar-item">FEROX TECHNOLOGIES</span>
+        <div class="custom-select w3-right" style="width: 150px">
+            <select name="lang" id="lang" class="w3-bar-item w3-hover-none w3-2021-inkwell">
+                <option value="vn" style="color: black; background-color: white">
+                    <b> Tiếng Việt </b>
+                </option>
+                <option value="en" style="color: black; background-color: white">
+                    <b> English </b>
+                </option>
+            </select>
+        </div>
+
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-question"></i> Hướng Dẫn
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-comments"></i> Hỗ Trợ Khách Hàng
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-home"></i> Trang Chủ
+        </button>
+    </div>
+
+    <!-- Sidebar/ Menu-->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index: 3; width: 300px" id="mySidebar">
+        <br />
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="IMG/avatar.png" class="w3-circle w3-margin-right" style="width: 46px" />
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>Mike</strong> <a href="Signin.html" class="w3-text-blue w3-hover-text-red"
+                        style="text-decoration: none;"> logout.</a></span><br />
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bell"></i></a>
+            </div>
+        </div>
+        <hr />
+        <div class="w3-container">
+            <h4><b>FEROX TRADING ONLINE</b></h4>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+                onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a href="Home.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>  Tài khoản</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-check-square fa-fw"></i>  Xác thực tài
+                khoản</a>
+            <a href="Bank.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wallet fa-fw"></i> 
+                Nạp/Rút tiền</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-chart-pie fa-fw"></i>  Báo cáo</a>
+            <a href="Shop.html" class="w3-bar-item w3-button w3-padding w3-2021-inkwell"><i class="fa fa-diamond fa-fw"></i>  Các kênh đầu
+                tư</a>
+            <a href="History.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Lịch sử giao
+                dịch</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Thông báo</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Cài
+                đặt</a><br /><br />
+        </div>
+        <br /><br /><br />
+        <hr />
+        <div class="w3-container">
+            <i>
+                <h3>Hỗ trợ Khách hàng</h3>
+            </i>
+            <i class="fas fa-phone" style="font-size:18px; color: #363945;"> 1800 988180 ext 100</i>
+            <i class="fas fa-paper-plane" style="font-size:18px; color: #363945;"> support@feroxsystem.com</i>
+        </div>
+        <hr>
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px; margin-top: 43px"><br>
+        <div class="w3-content w3-display-container" style="max-width:1300px;">
+            <img class="mySlides w3-animate-opacity" src="IMG/Trade1.jpg" style="width:100%; max-height: 190px;">
+            <img class="mySlides w3-animate-zoom" src="IMG/gold.jpg" style="width:100%; max-height: 190px;">
+            <img class="mySlides w3-animate-right" src="IMG/landpage.png" style="width:100%; max-height: 190px;">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+                style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+        </div>
+        <!-- Header --> <!-- IMG 266px - 200px-->
+        <header class="w3-container" style="padding-top: 22px; padding-left: 100px;">
+            <h3>
+                <b><i class="fa fa-chart-line"></i> Chọn danh mục đầu tư</b><br>
+            </h3>
+        </header>
+        <div style="padding: 0px 300px 0px 100px;">
+            <div class="w3-panel w3-container w3-border-top w3-border-bottom" style="max-height: 250px;">
+                <nav class="w3-left"><img src="IMG/gold.jpg" style="height: 200px; margin: 20px; width: 266px;"></nav>
+                <div style="margin: 10px 40px 0px; color: #363945;"><a href="" class="w3-text-black w3-hover-text-blue"
+                        style="text-decoration: none;">
+                        <h3><b>Package 1
+                    </a> - </b> <i class="fas fa-dollar-sign w3-text-green"> 1000 USD </i>
+                    <p class="w3-text-red" style="display:inline;"> (New) </p>
+                    <p class="w3-right" style="display:inline"><i class="far fa-bookmark" id="bookmark"></i></p>
+                    </h3>
+                </div>
+                <div class="w3-text-gray" style="margin: 10px;">Introduce Package</div>
+                <div style="text-indent: 50px; padding-right: 100px; text-align: justify;">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </div><br><br>
+                <div class="w3-display-container" style="position: relative; bottom: 0px;">
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> FOREX</button>
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> BITCOIN</button>
+                    <div class="w3-text-gray w3-display-bottomright">Ngày hết hạn : 10/01/2022.</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 0px 300px 0px 100px;">
+            <div class="w3-panel w3-container w3-border-top w3-border-bottom" style="max-height: 250px;">
+                <nav class="w3-left"><img src="IMG/bitcoin.png" style="height: 200px; margin: 20px; width: 266px;"></nav>
+                <div style="margin: 10px 40px 0px; color: #363945;"><a href="" class="w3-text-black w3-hover-text-blue"
+                        style="text-decoration: none;">
+                        <h3><b>Package 2
+                    </a> - </b> <i class="fas fa-dollar-sign w3-text-green"> 1000 USD </i>
+                    <p class="w3-text-red" style="display:inline;"> (New) </p>
+                    <p class="w3-right" style="display:inline"><i class="far fa-bookmark" id="bookmark"></i></p>
+                    </h3>
+                </div>
+                <div class="w3-text-gray" style="margin: 10px;">Introduce Package</div>
+                <div style="text-indent: 50px; padding-right: 100px; text-align: justify;">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </div><br><br>
+                <div class="w3-display-container" style="position: relative; bottom: 0px;">
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> FOREX</button>
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> BITCOIN</button>
+                    <div class="w3-text-gray w3-display-bottomright">Ngày hết hạn : 10/01/2022.</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 0px 300px 0px 100px;">
+            <div class="w3-panel w3-container w3-border-top w3-border-bottom" style="max-height: 250px;">
+                <nav class="w3-left"><img src="IMG/traide2.jpg" style="height: 200px; margin: 20px; width: 266px;"></nav>
+                <div style="margin: 10px 40px 0px; color: #363945;"><a href="" class="w3-text-black w3-hover-text-blue"
+                        style="text-decoration: none;">
+                        <h3><b>Package 3
+                    </a> - </b> <i class="fas fa-dollar-sign w3-text-green"> 1000 USD </i>
+                    <p class="w3-text-red" style="display:inline;"> (New) </p>
+                    <p class="w3-right" style="display:inline"><i class="far fa-bookmark" id="bookmark"></i></p>
+                    </h3>
+                </div>
+                <div class="w3-text-gray" style="margin: 10px;">Introduce Package</div>
+                <div style="text-indent: 50px; padding-right: 100px; text-align: justify;">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </div><br><br>
+                <div class="w3-display-container" style="position: relative; bottom: 0px;">
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> FOREX</button>
+                    <button class="w3-button w3-2021-inkwell w3-round-large fas fa-tag"> BITCOIN</button>
+                    <div class="w3-text-gray w3-display-bottomright">Ngày hết hạn : 10/01/2022.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-white";
+    }
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+</script>
+
+</html>

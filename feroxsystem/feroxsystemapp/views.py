@@ -6,18 +6,19 @@ from django.views.generic import TemplateView
 from .connect import Connect
 import json
 from .models import LoginForm
-from django.contrib.auth.views import LoginView
+import cgi
 
 
 # Create your views here.
 
+"""
 class LoginViewSite(LoginView):
     template_name = 'pages/Signin.html'
 
 
 class HomeViewSite(LoginRequiredMixin, TemplateView):
     template_name = 'pages/Home.html'
-
+"""
 
 """
 # Create login function
@@ -49,7 +50,7 @@ def formview(request):
         # email = request.session['email']
         return render(request, 'pages/Home.html', {})
     else:
-        return render(request, 'pages/login.html')
+        return render(request, 'pages/Signin.html')
 
 
 def logout(request):
@@ -57,7 +58,7 @@ def logout(request):
         del request.session['email']
     except:
         pass
-    return render(request, 'pages/login.html')
+    return render(request, 'pages/Signin.html')
 """
 
 """

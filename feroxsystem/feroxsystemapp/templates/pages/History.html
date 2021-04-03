@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a811b5afd0.js" crossorigin="anonymous"></script>
+    <title>Ferox Technologies - Account</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 84%;
+        }
+
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top Container -->
+    <div class="w3-bar w3-top w3-2021-inkwell w3-large">
+        <span class="w3-bar-item">FEROX TECHNOLOGIES </span>
+        <div class="custom-select w3-right" style="width: 150px">
+            <select name="lang" id="lang" class="w3-bar-item w3-hover-none w3-2021-inkwell">
+                <option value="vn" style="color: black; background-color: white">
+                    <b> Tiếng Việt </b>
+                </option>
+                <option value="en" style="color: black; background-color: white">
+                    <b> English </b>
+                </option>
+            </select>
+        </div>
+
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-question"></i> Hướng Dẫn
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-comments"></i> Hỗ Trợ Khách Hàng
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-home"></i> Trang Chủ
+        </button>
+    </div>
+
+    <!-- Sidebar/ Menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index: 3; width: 300px" id="mySidebar">
+        <br />
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="IMG/avatar.png" class="w3-circle w3-margin-right" style="width: 46px" />
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>Mike</strong>
+                    <a href="Signin.html" class="w3-hover-text-red"> logout.</a></span><br />
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bell"></i></a>
+            </div>
+        </div>
+        <hr />
+        <div class="w3-container">
+            <h4><b>FEROX TRADING ONLINE</b></h4>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+                onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a href="Home.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>  Tài khoản</a>
+            <a href="Settings.html#C1" class="w3-bar-item w3-button w3-padding"><i class="fa fa-check-square fa-fw"></i>  Xác thực tài
+                khoản</a>
+            <a href="Bank.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wallet fa-fw"></i> 
+                Nạp/Rút tiền</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-chart-pie fa-fw"></i>  Báo cáo</a>
+            <a href="Shop.html" class="w3-bar-item w3-button"><i class="fa fa-diamond fa-fw"></i>  Các kênh đầu
+                tư</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-padding w3-2021-inkwell"><i class="fa fa-history fa-fw"></i>  Lịch sử giao
+                dịch</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Thông báo</a>
+            <a href="Settings.html#C2" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Cài
+                đặt</a><br /><br />
+        </div>
+        <br /><br /><br />
+        <hr />
+        <div class="w3-container">
+            <i>
+                <h3>Hỗ trợ Khách hàng</h3>
+            </i>
+            <i class="fas fa-phone" style="font-size: 18px"> 1800 988180 ext 100</i>
+            <i class="fas fa-paper-plane" style="font-size: 18px">
+                support@feroxsystem.com</i>
+        </div>
+        <hr />
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px; margin-top: 43px">
+        <!-- Header -->
+        <header class="w3-container" style="padding-top: 22px">
+            <div>
+                <h3>
+                    <b><i class="fa fa-history"></i> Lịch sử giao dịch</b>
+                </h3>
+            </div>
+        </header>
+
+        <div class="w3-container">
+            <div class="w3-panel w3-border w3-white">
+                <div class="w3-center"><br>
+                    <div><h3><b>LỊCH SỬ GIAO DỊCH</b></h3></div><br>
+                    <table class="w3-table w3-striped w3-bordered w3-centered">
+                        <thead style="font-size: 20px">
+                            <th>STT</th>
+                            <th>Tài Khoản</th>
+                            <th>Số Tiền</th>
+                            <th>Thời Gian</th>
+                            <th>Trạng Thái</th>
+                            <th>Hành Động</th>
+                        </thead>
+                        <tr style="font-size: 18px;">
+                            <td>4</td>
+                            <td>Mike</td>
+                            <td class="">+1000 USD</td>
+                            <td>19:04 23/03/2021</td>
+                            <td class="w3-text-red">Thất bại</td>
+                            <td><a href=""><div class="fas fa-tasks"> Chỉnh sửa</div></a></td>
+                        </tr>
+                        <tr style="font-size: 18px;">
+                            <td>3</td>
+                            <td>Mike</td>
+                            <td class="w3-text-red">-1000 USD</td>
+                            <td>16:54 23/03/2021</td>
+                            <td class="w3-text-yellow">Đang chờ</td>
+                            <td><a href=""><div class="fas fa-tasks"> Chỉnh sửa</div></a></td>
+                        </tr>
+                        <tr style="font-size: 18px;">
+                            <td>2</td>
+                            <td>Jack</td>
+                            <td class="w3-text-green">+1000 USD</td>
+                            <td>16:24 23/03/2021</td>
+                            <td class="w3-text-green">Thành công</td>
+                            <td><a href=""><div class="fas fa-tasks"> Chỉnh sửa</div></a></td>
+                        </tr>
+                        <tr style="font-size: 18px;">
+                            <td>1</td>
+                            <td>Mike</td>
+                            <td class="w3-text-green">+1000 USD</td>
+                            <td>16:04 23/03/2021</td>
+                            <td class="w3-text-green">Thành công</td>
+                            <td><a href=""><div class="fas fa-tasks"> Chỉnh sửa</div></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><br>
+
+        <!-- Footer-->
+        <footer class="w3-container w3-2021-inkwell" style="max-height: 60px">
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                    <h3>ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</h3>
+                </div>
+                <div class="w3-half">
+                    <h3>FEROX ALPHA QUANTS HEDGE FUND</h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

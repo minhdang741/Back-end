@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a811b5afd0.js" crossorigin="anonymous"></script>
+    <title>Frerox Technologies - Đăng Ký</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        input,
+        select,
+        textarea {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top Container -->
+    <div class="w3-bar w3-top w3-2021-inkwell w3-large">
+        <span class="w3-bar-item">FEROX TECHNOLOGIES</span>
+        <div class="custom-select w3-right" style="width: 150px">
+            <select name="lang" id="lang" class="w3-bar-item w3-hover-none w3-2021-inkwell">
+                <option value="vn" style="color: black; background-color: white">
+                    <b> Tiếng Việt </b>
+                </option>
+                <option value="en" style="color: black; background-color: white">
+                    <b> English </b>
+                </option>
+            </select>
+        </div>
+
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-question"></i> Hướng Dẫn
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-comments"></i> Hỗ Trợ Khách Hàng
+        </button>
+        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
+            <i class="fa fa-home"></i> Trang Chủ
+        </button>
+    </div>
+
+    <!-- SignIn Form -->
+    <div class="w3-row">
+        <div class="w3-third">
+            <p></p>
+        </div>
+        <div class="w3-third w3-animate-top">
+            <div class="w3-container w3-card-2 w3-main w3-2021-inkwell" style="margin-top: 40%">
+                <div class="w3-center w3-padding-16">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div style="font-family: 'Courier New', Courier, monospace">
+                        3 / 3
+                    </div>
+                </div>
+                <section id="Signup3" class="w3-2021-inkwell w3-center">
+                    <!-- Action của form đăng ký -->
+                    <form action="" method="post">
+                        <div class="w3-center w3-padding-16">
+                            <h4><b>Hình CMND <p style="display: inline; color: red;">MẶT TRƯỚC</p></b></h4>
+                        </div>
+                        <div class="input-group mb-3 w3-white" style="width: 100%; border-radius: 5px;">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02" style="width: 100%;">
+                            </div>
+                            <div class="input-group-append">
+                            </div>
+                        </div><br>
+                        <!---->
+                        <div class="w3-center w3-padding-16">
+                            <h4><b>Hình CMND <p style="display: inline; color: red;">MẶT SAU</p></b></h4>
+                        </div>
+                        <div class="input-group mb-3 w3-white" style="width: 100%; border-radius: 5px;">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02" style="width: 100%;">
+                            </div>
+                            <div class="input-group-append">
+                            </div>
+                        </div><br>
+                        <h5><input type="checkbox" name="confirm" id="confirm" required> Tôi xác nhận thông tin trên đã đúng </h5>
+                        <h5><input type="checkbox" name="confirm" id="confirm" required> Tôi đã đọc và đồng ý với điều khoản và điều kiện </h5>
+                        <div class="w3-container w3-center" style="font-size: 18px">
+                            <a href="#" style="text-decoration: none; color: #fff">
+                                <button type="submit" class="w3-center" style="
+                      padding: 12px 20px;
+                      margin: 8px 0px;
+                      width: 75%;
+                      border: 1px solid #35d86b;
+                      background-color: #35d86b;
+                    ">
+                                    Login
+                                </button></a>
+                        </div>
+                        <br />
+                        <div class="w3-container w3-center" style="font-size: 18px">
+                            <span class="w3-left"><a href="#">LƯU Ý </a></span>
+                            <span class="w3-right">Đã có tài khoản ?<a href="Signin.html"> Đăng Nhập.</a></span>
+                        </div>
+                        <br /><br />
+                    </form>
+                </section>
+            </div>
+        </div>
+        <div class="w3-third">
+            <p></p>
+        </div>
+    </div>
+    <footer class="w3-container w3-2021-inkwell" style="max-height: 60px">
+        <div class="w3-row-padding">
+            <div class="w3-center">
+                <h3>FEROX TECHNOLOGIES INVESTORS SYSTEM</h3>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
