@@ -11,10 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_on_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -25,7 +24,7 @@ SECRET_KEY = 'ws-9lvy3wsqh7v-%z2gx!%fzc5b22$&!##ubfp8rd(zyv9i6#m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["feroxsystem.com","127.0.0.1","127.0.1.1"]
 
 
 # Application definition
@@ -42,7 +41,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,7 +50,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 ROOT_URLCONF = 'feroxsystem.urls'
 
@@ -89,7 +86,8 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'mydatabase',
+        'NAME': 'customerdata',
+		'HOST': 'localhost',
     }
 }
 
@@ -128,20 +126,13 @@ USE_TZ = True
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = '/static/'
 
-LOGIN_URL = '/login/'
+# LOGIN_URL = '/login/'
 # Set up memory cache
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': 'unix:/tmp/memcached.sock',
-    }
-}
-django_on_heroku.settings(locals())

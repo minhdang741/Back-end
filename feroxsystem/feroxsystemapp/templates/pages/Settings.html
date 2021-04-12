@@ -45,13 +45,14 @@
             font-family: Arial, Helvetica, sans-serif;
             padding: 12px 20px;
             margin: 8px 0px;
-            width: 60%;
             font-size: 16px;
         }
-        label{
+
+        label {
             font-size: 20px;
         }
-        button.bnt2{
+
+        button.bnt2 {
             font-family: Arial, Helvetica, sans-serif;
             padding: 12px 20px;
             margin: 8px 0px;
@@ -64,28 +65,17 @@
 
 <body class="w3-light-grey">
     <!-- Top Container -->
-    <div class="w3-bar w3-top w3-2021-inkwell w3-large" style="border-bottom: 1px solid white;">
-        <span class="w3-bar-item">FEROX TECHNOLOGIES </span>
-        <div class="custom-select w3-right" style="width: 150px">
-            <select name="lang" id="lang" class="w3-bar-item w3-hover-none w3-2021-inkwell">
-                <option value="vn" style="color: black; background-color: white">
-                    <b> Tiếng Việt </b>
-                </option>
-                <option value="en" style="color: black; background-color: white">
-                    <b> English </b>
-                </option>
-            </select>
+    <div class="w3-top">
+        <div class="w3-bar w3-2021-inkwell w3-large" style="border-bottom: 1px solid white;">
+            <span class="w3-bar-item">FEROX TECHNOLOGIES </span>
+            <div class="w3-dropdown-hover w3-right">
+                <button class="w3-button w3-2021-inkwell" style="width: 160px;">VN</button>
+                <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0;">
+                    <a href="#" class="w3-bar-item w3-button w3-center" style="text-decoration: none;">EN</a>
+                </div>
+            </div>
+            <div class="w3-clear"></div>
         </div>
-
-        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
-            <i class="fa fa-question"></i> Hướng Dẫn
-        </button>
-        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
-            <i class="fa fa-comments"></i> Hỗ Trợ Khách Hàng
-        </button>
-        <button class="w3-bar-item w3-button w3-hover-light-grey w3-hover-text-black w3-right" onclick="myFunction()">
-            <i class="fa fa-home"></i> Trang Chủ
-        </button>
     </div>
 
     <!-- Sidebar/ Menu -->
@@ -93,14 +83,15 @@
         <br />
         <div class="w3-container w3-row">
             <div class="w3-col s4">
-                <img src="IMG/avatar.png" class="w3-circle w3-margin-right" style="width: 46px" />
+				        {% load static %}
+                <img src="{% static 'IMG/avatar.png' %}" class="w3-circle w3-margin-right" style="width: 46px" />
             </div>
             <div class="w3-col s8 w3-bar">
                 <span>Welcome, <strong>Mike</strong>
-                    <a href="Signin.html" class="w3-hover-text-red"> logout.</a></span><br />
-                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-bell"></i></a>
+                    <a href="/" class="w3-hover-text-red"> logout.</a></span>
+                <span class="w3-left">
+                    <h5>Số dư <b style="font-size: 17px">10.000.000.000</b></h5>
+                </span>
             </div>
         </div>
         <hr />
@@ -110,22 +101,19 @@
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="Home.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>  Tài khoản</a>
-            <a href="Settings.html#C1" class="w3-bar-item w3-button w3-padding w3-2021-inkwell"><i
-                    class="fa fa-check-square fa-fw"></i>  Xác thực tài
-                khoản</a>
-            <a href="Bank.html" class="w3-bar-item w3-button w3-padding"><i
-                    class="fa fa-wallet fa-fw"></i> 
-                Nạp/Rút tiền</a>
+            <a href="home" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>  Tài khoản</a>
+            <a href="bank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wallet fa-fw"></i>  Nạp
+                tiền/Rút
+                tiền</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-chart-pie fa-fw"></i>  Báo cáo</a>
-            <a href="Shop.html" class="w3-bar-item w3-button"><i class="fa fa-diamond fa-fw"></i>  Các kênh đầu
-                tư</a>
-            <a href="History.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Lịch sử
-                giao
-                dịch</a>
+            <a href="shop" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Các kênh
+                đầu tư</a>
+            <a href="history" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  Lịch sử
+                giao dịch</a>
             <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Thông báo</a>
-            <a href="#C2" class="w3-bar-item w3-button w3-padding w3-2021-inkwell"><i class="fa fa-cog fa-fw"></i>  Cài
-                đặt</a><br /><br />
+            <a href="settings" class="w3-bar-item w3-button w3-padding w3-2021-inkwell"><i
+                    class="fa fa-cog fa-fw"></i>  Cài
+                đặt/Xác thực</a><br /><br />
         </div>
         <br /><br /><br />
         <hr />
@@ -141,18 +129,16 @@
     </nav>
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor: pointer"
-        title="close side menu" id="myOverlay"></div>
+        title="close side menu" id="myOverlay">
+    </div>
 
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left: 300px; margin-top: 43px">
         <!-- Header -->
-        <header class="w3-container" style="padding-top: 22px">
+        <header class="w3-container">
             <div>
                 <h3>
-                    <b><i class="fa fa-lock"></i> Xác thực tài khoản</b>
-                    <p class="w3-right" style="padding-right: 50px; display: inline">
-                        Số dư ví : <b>10000,</b> USD
-                    </p>
+                    <b><i class="fa fa-lock"></i> Cài đặt & Xác thực tài khoản</b>
                 </h3>
             </div>
         </header>
@@ -165,24 +151,27 @@
                     <br />
                 </div>
                 <form action="" method="post" style="padding-left: 190px;">
+                    {% csrf_token %}
+                    <label for="name">ID Khách Hàng : </label><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 75%;" type="text" name="id" id="id"
+                        value="19817328012" readonly><br>
                     <label for="name">Tên Khách Hàng : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none" type="text" name="name" id="name"
-                        value="NGUYEN VAN A" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 75%;" type="text" name="name"
+                        id="name" value="NGUYEN VAN A" readonly><br>
                     <label for="pass">Mật Khẩu : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none" type="password" name="pass" id="pass"
-                        value="1234567890" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 60%;" type="password" name="pass"
+                        id="pass" value="1234567890" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài
+                        Đặt</button><br>
                     <label for="address">Địa Chỉ : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none" type="text" name="address" id="address"
-                        value="1234567890" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 75%;" type="text" name="address"
+                        id="address" value="1234567890" readonly><br>
                     <label for="phone">Số Điện Thoại : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none" type="text" name="phone" id="phone"
-                        value="0909909900" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 75%;" type="text" name="phone"
+                        id="phone" value="0909909900" readonly><br>
                     <label for="email">Email : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none" type="email" name="email" id="email"
-                        value="0909@gmail.com" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
-                    <label for="rdc">Mã Mời : </label><br>
-                    <input class="w3-text-black" style="pointer-events:none;" type="text" name="rdc" id="rdc"
-                        value="1234567890" readonly><button onclick="" class="w3-black w3-border-0 bnt2"> Cài Đặt</button><br>
+                    <input class="w3-text-black" style="pointer-events:none; width: 60%;" type="email" name="email"
+                        id="email" value="0909@gmail.com" readonly><button onclick="" class="w3-black w3-border-0 bnt2">
+                        Cài Đặt</button><br>
                     <div style="padding-bottom: 50px;"></div>
                 </form>
             </div>
@@ -202,10 +191,11 @@
                     <h3><b>CÀI ĐẶT</b></h3>
                     <br />
                 </div>
-                <div class="w3-quarter"><button></button></div>
-                <div class="w3-quarter"><button></button></div>
-                <div class="w3-quarter"><button></button></div>
-                <div class="w3-quarter"><button></button></div>
+                <div class="w3-quarter"><button>Cho phép Ferox tự động chọn danh mục đầu tư theo lợi nhuận hoặc rủi
+                        ro</button></div>
+                <div class="w3-quarter"><button>Lợi nhuận /Rủi ro</button></div>
+                <div class="w3-quarter"><button>Số tiền /Tự động</button></div>
+                <div class="w3-quarter"><button>Thời hạn</button></div>
             </div>
         </div><br>
 

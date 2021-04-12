@@ -11,6 +11,20 @@ import cgi
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'pages/Home.html')
+
+def bank(request):
+    return render(request, 'pages/Bank.html')
+
+def shop(request):
+    return render(request, 'pages/Shop.html')
+
+def history(request):
+    return render(request, 'pages/History.html')
+
+def settings(request):
+    return render(request, 'pages/Settings.html')
 """
 class LoginViewSite(LoginView):
     template_name = 'pages/Signin.html'
@@ -65,10 +79,10 @@ def logout(request):
 def index(request):
     customer = Connect.connection()
     file = open('/home/dang/Documents/customer/customer (another copy).json', 'r')
-    
+
      with open('/home/dang/Documents/customer/customer (copy).json') as f:
         data = json.loads(f)
-    
+
     data = json.load(file)
     # print(data)
     customer.insert_many(data)

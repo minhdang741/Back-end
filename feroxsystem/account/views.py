@@ -57,15 +57,14 @@ def login(request):
             email = loginform.cleaned_data['email']
             password = loginform.cleaned_data['password']
             if email == 'test@gmail.com' and password == '123':
-                return render(request, 'pages/Home.html')
+                return HttpResponseRedirect('/home')
     else:
         loginform = LoginForm()
     return render(request, 'registration/Signin.html', {'form': loginform})
 # Handle sign up
-data1 = {} # Declare global argument
-data2 = {} # Declare global argument
+data = {} # Declare global argument
 def signup1(request):
-    global data1
+    global data
     # Get request from client
     if request.method == 'POST':
         signupform1 = SignUpForm1(request.POST)
@@ -73,13 +72,16 @@ def signup1(request):
         if signupform1.is_valid():
             cmndid = signupform1.cleaned_data['cmnd']
             id = cmndid.rjust(12, "0")
-            data1 = {
+            data = {
                     "_id":id,
                     "REFERRAL CODE":signupform1.cleaned_data['referralcode'],
                     "EMAIL":signupform1.cleaned_data['emailsignup'],
                     "PASSWORD":signupform1.cleaned_data['passwordsignup'],
                     "NAME":signupform1.cleaned_data['name'],
                     "CMND":signupform1.cleaned_data['cmnd'],
+                    "BIRTHDAY":signupform1.cleaned_data['birthday'],
+                    "PHONE":signupform1.cleaned_data['phone'],
+                    "ADDRESS":signupform1.cleaned_data['address'],
             }
             """
             with open("data.json", "w") as f:
@@ -91,7 +93,7 @@ def signup1(request):
         signupform1 = SignUpForm1()
     return render(request, 'registration/Signup1.html', {'form': signupform1})
 
-
+"""
 def signup2(request):
     global data2
     # Get request from client
@@ -103,27 +105,27 @@ def signup2(request):
                     "BIRTHDAY":signupform2.cleaned_data['birthday'],
                     "PHONE":signupform2.cleaned_data['phone'],
                     "ADDRESS":signupform2.cleaned_data['address']}
-            """
+
             with open("data.json", "a") as f:
                 json.dump(data2, f, sort_keys=True)
                 f.close()
-            """
+
             return HttpResponseRedirect('/signup3')
     else:
         signupform2 = SignUpForm2()
     return render(request, 'registration/Signup2.html', {'form': signupform2})
+"""
 
-
-def signup3(request):
-    global data1, data2
-    data = {**data1, **data2} # Merge data1 and data2
+def signup2(request):
+    global data
+    # data = {**data1, **data2} # Merge data1 and data2
     # Get request from client
     if request.method == 'POST':
-        signupform3 = SignUpForm3(request.POST, request.FILES) # Get file from client
-        if signupform3.is_valid():
+        signupform2 = SignUpForm2(request.POST, request.FILES) # Get file from client
+        if signupform2.is_valid():
             # Save image in project's root
-            img1 = signupform3.cleaned_data['cmndimg1']
-            img2 = signupform3.cleaned_data['cmndimg2']
+            img1 = signupform2.cleaned_data['cmndimg1']
+            img2 = signupform2.cleaned_data['cmndimg2']
             with Image.open(img1) as im1:
                 im1.save(str(data.get('NAME'))+" 1", "png")
             with Image.open(img2) as im2:
@@ -134,8 +136,8 @@ def signup3(request):
                 f.close()
             return HttpResponseRedirect('/')
     else:
-        signupform3 = SignUpForm3()
-    return render(request, 'registration/Signup3.html', {'form': signupform3})
+        signupform2 = SignUpForm2()
+    return render(request, 'registration/Signup2.html', {'form': signupform2})
 
 
 """
